@@ -1,0 +1,134 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Global */
+@font-face {
+    font-family: "Figtree";
+    src: 
+        local("Figtree"),
+        url("assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+:root {
+    --yell-color: hsl(47, 88%, 63%);
+    --whit-color: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    --font-preset-1: 800 1.5rem/150% "Figtree", sans-serif;
+    --font-preset-2: 500 1rem/150% "Figtree", sans-serif;
+    --font-preset-3: 500 0.875rem/150% "Figtree", sans-serif;
+    --font-preset-3-bold: 800 0.875rem/150% "Figtree", sans-serif;
+
+    --spacing-300: 1.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-100: 0.5rem;
+    --spacing-50: 0.25rem;
+}
+
+html,
+body {
+    font: var(--font-preset-2);
+    background-color: var(--yell-color);
+    color: var(--gray-950);
+}
+
+/* Rules */
+.main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin-inline: auto;
+    padding-inline: var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid var(--gray-950);
+    background-color: var(--whit-color);
+    padding: var(--spacing-300);
+    display: grid;
+    gap: var(--spacing-300);
+    border-radius: 1.25rem;
+    max-width: 384px;
+    box-shadow: 8px 8px 0 0 rgb(0,0,0);
+}
+
+.card-img {
+    border-radius: 0.625rem;
+}
+.card__content {
+    display: grid;
+    gap: 0.75rem;
+}
+.card__content-category {
+    background-color: var(--yell-color);
+    color: var(--gray-950);
+    padding-inline: var(--spacing-150) ;
+    padding-block: var(--spacing-50);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-100);
+    width: fit-content;
+    border-radius: var(--spacing-50);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.card__content-publish_date {
+    font-size: 0.75rem;
+}
+
+.card__content-title {
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.card:hover .card__content-title {
+    color: var(--yell-color);
+}
+
+.card__content-text {
+    font: var(--font-preset-3);
+    color: var(--gray-500);
+}
+
+.card__author {
+    display: flex;
+    gap: var(--spacing-150);
+    align-items: center;
+}
+
+.card__author-pic {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+.card__author-name {
+    font: var(--font-preset-3-bold);
+}
+
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 300px) {
+    .card {
+        padding: var(--spacing-150);
+    }
+}
