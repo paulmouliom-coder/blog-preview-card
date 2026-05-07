@@ -82,7 +82,7 @@ body {
 
 .card-img {
     border-radius: 0.625rem;
-    
+    aspect-ratio: 4/3;
     object-fit: cover;
 }
 .card__content {
@@ -144,6 +144,7 @@ body {
         width: 20.44rem; /* 327px */
     }
     .card-img {
+        
         height: 12.5rem;
     }
 }
